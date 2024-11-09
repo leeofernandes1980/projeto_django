@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Melhores Combinações</title>
+</head>
+<body>
+    <h1>Melhores Combinações para Jogos de 12, 13, 14 e 15 Pontos</h1>
+
+    {% for pontos, combinacoes in melhores_combinacoes.items %}
+        <h2>Top 5 Combinações para {{ pontos }} Pontos</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Combinação</th>
+                    <th>12 Acertos</th>
+                    <th>13 Acertos</th>
+                    <th>14 Acertos</th>
+                    <th>15 Acertos</th>
+                    <th>Pares</th>
+                    <th>Ímpares</th>
+                    <th>Primos</th>
+                    <th>Repetições</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in combinacoes %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.combinação }}</td>
+                    <td>{{ item.12_acertos }}</td>
+                    <td>{{ item.13_acertos }}</td>
+                    <td>{{ item.14_acertos }}</td>
+                    <td>{{ item.15_acertos }}</td>
+                    <td>{{ item.pares }}</td>
+                    <td>{{ item.ímpares }}</td>
+                    <td>{{ item.primos }}</td>
+                    <td>{{ item.repetições }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endfor %}
+</body>
+</html>
