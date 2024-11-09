@@ -63,6 +63,73 @@ http://127.0.0.1:8000/gerar-combinacoes/
 Isso carregará a página onde você poderá ver as combinações geradas e as melhores combinações para os acertos de 12, 13, 14 e 15 pontos.
 Estrutura do Projeto
 
+Mais detalhes para a execução do código:
+
+Configuração e Execução do Projeto
+
+Siga os passos abaixo para configurar e executar este projeto Django em sua máquina local.
+1. Clone o Repositório
+
+git clone https://github.com/seu_usuario/projeto_django.git
+cd projeto_django
+
+2. Crie e Ative um Ambiente Virtual
+
+    Windows:
+
+python -m venv venv
+venv\Scripts\activate
+
+macOS/Linux:
+
+    python3 -m venv venv
+    source venv/bin/activate
+
+3. Instale as Dependências
+
+Certifique-se de que todas as dependências do projeto estão instaladas:
+
+pip install -r requirements.txt
+
+4. Configure o Banco de Dados
+
+Aplique as migrações do banco de dados para configurar as tabelas necessárias:
+
+python manage.py migrate
+
+5. Coloque o Arquivo CSV na Raiz do Projeto
+
+Certifique-se de que o arquivo lotofacilatual1.csv com o histórico de resultados da Lotofácil esteja na raiz do projeto. O código foi configurado para buscar o arquivo nesse local:
+
+projeto_django/
+├── combinacoes/
+├── projeto_django/
+├── venv/
+├── .gitignore
+├── README.md
+├── db.sqlite3
+├── lotofacilatual1.csv  # <-- Coloque o arquivo CSV aqui
+└── manage.py
+
+6. Crie o Diretório static (opcional)
+
+Para evitar avisos sobre arquivos estáticos, crie uma pasta static na raiz do projeto:
+
+mkdir static
+
+7. Inicie o Servidor de Desenvolvimento
+
+Com o ambiente configurado, execute o servidor de desenvolvimento Django:
+
+python manage.py runserver
+
+8. Acesse a Aplicação
+
+Abra o navegador e acesse o seguinte endereço para visualizar as combinações geradas:
+
+http://127.0.0.1:8000/gerar-combinacoes/
+
+
     projeto_django/: Pasta principal do projeto Django, contendo configurações e arquivos principais.
     combinacoes/: Aplicação responsável por gerar as combinações e realizar a análise de acertos.
     templates/combinacoes/resultado.html: Template HTML para exibir os resultados das combinações e suas análises.
