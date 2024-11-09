@@ -13,7 +13,7 @@ Pré-requisitos
 
     Python 3.8+
     Django 3.2+
-    Um arquivo .csv com o histórico de resultados anteriores, localizado em: C:\Users\leeof\OneDrive\Documents\Documentos\lotofacilatual1.csv
+    Um arquivo .csv com o histórico de resultados anteriores, localizado na raiz do projeto.
 
 Instalação e Execução
 
